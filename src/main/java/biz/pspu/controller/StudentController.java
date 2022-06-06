@@ -34,4 +34,6 @@ public class StudentController {
     public void delete(@RequestBody String id){
         studentService.delete(Integer.parseInt(id));
     }
+
+    //TODO реализовать передачу фото
 }

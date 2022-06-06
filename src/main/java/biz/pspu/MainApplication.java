@@ -14,22 +14,10 @@ public class MainApplication {
 
     private static final Logger logger = LoggerFactory.getLogger(MainApplication.class);
 
-    private static ApplicationContext applicationContext;
-
     public static void main(String[] args) {
         logger.info("SpringApplication.run...");
         SpringApplication.run(MainApplication.class, args);
         logger.info("SpringApplication.run...Ok");
-
     }
-
-    public static ApplicationContext getApplicationContext() {
-        return applicationContext;
-    }
-
-    public static void setApplicationContext(ApplicationContext ac) {
-        applicationContext = ac;
-    }
-
 }
 

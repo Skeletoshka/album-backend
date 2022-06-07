@@ -15,6 +15,7 @@ public class StudentController {
     private StudentService studentService;
 
     @PostMapping ("/getlist")
+    @CrossOrigin
     public List<StudentView> getList(@RequestBody String facultyId){
         return studentService.getAll(Integer.parseInt(facultyId));
     }

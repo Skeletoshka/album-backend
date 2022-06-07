@@ -9,10 +9,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Service
 public class StudentService {
@@ -41,6 +38,7 @@ public class StudentService {
             studentView.setFacultyName(facultyName.get(studentView.getFacultyId()));
             views.add(studentView);
         });
+        views.sort(Comparator.comparingInt(StudentView::getStudentId));
         return views;
     }
 

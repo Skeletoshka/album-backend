@@ -42,12 +42,15 @@ public class Student {
     private String studentDescription;
 
     @Column(name = "student_studyend")
-    @NotNull(message = "Поле \"Год окончания студента\" не может быть пустым")
     private Integer studentStudyEnd;
 
     @Column(name = "student_specialcase", nullable = false)
     @NotNull(message = "Поле \"Особый случай студента\" не может быть пустым")
     private Integer studentSpecialCase;
+
+    @Column(name = "student_numstar", nullable = false)
+    @NotNull(message = "Поле \"Номер звезды студента\" не может быть пустым")
+    private Integer studentNumStar;
 
     public Student() {
     }
@@ -60,7 +63,8 @@ public class Student {
                    String studentPhotoPath,
                    String studentDescription,
                    Integer studentStudyEnd,
-                   Integer studentSpecialCase) {
+                   Integer studentSpecialCase,
+                   Integer studentNumStar) {
         this.studentId = studentId;
         this.studentName = studentName;
         this.studentLastName = studentLastName;
@@ -70,6 +74,7 @@ public class Student {
         this.studentDescription = studentDescription;
         this.studentStudyEnd = studentStudyEnd;
         this.studentSpecialCase = studentSpecialCase;
+        this.studentNumStar = studentNumStar;
     }
 
     public Integer getStudentId() {
@@ -142,5 +147,13 @@ public class Student {
 
     public void setStudentSpecialCase(Integer studentSpecialCase) {
         this.studentSpecialCase = studentSpecialCase;
+    }
+
+    public Integer getStudentNumStar() {
+        return studentNumStar;
+    }
+
+    public void setStudentNumStar(Integer studentNumStar) {
+        this.studentNumStar = studentNumStar;
     }
 }

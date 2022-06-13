@@ -34,6 +34,9 @@ public class StudentView {
     @Column(name = "student_specialcase")
     private Integer studentSpecialCase;
 
+    @Column(name = "student_numstar")
+    private Integer studentNumStar;
+
     public StudentView() {
     }
 
@@ -45,7 +48,8 @@ public class StudentView {
                        String studentPhotoPath,
                        String studentDescription,
                        Integer studentStudyEnd,
-                       Integer studentSpecialCase) {
+                       Integer studentSpecialCase,
+                       Integer studentNumStar) {
         this.studentId = studentId;
         this.studentName = studentName;
         this.studentLastName = studentLastName;
@@ -55,6 +59,7 @@ public class StudentView {
         this.studentDescription = studentDescription;
         this.studentStudyEnd = studentStudyEnd;
         this.studentSpecialCase = studentSpecialCase;
+        this.studentNumStar = studentNumStar;
     }
 
     public Integer getStudentId() {
@@ -135,5 +140,13 @@ public class StudentView {
 
     public void setFacultyName(String facultyName) {
         this.facultyName = facultyName;
+    }
+
+    public Integer getStudentNumStar() {
+        return studentNumStar;
+    }
+
+    public void setStudentNumStar(Integer studentNumStar) {
+        this.studentNumStar = studentNumStar;
     }
 }

@@ -38,7 +38,6 @@ public class Student {
     private String studentPhotoPath;
 
     @Column(name = "student_description")
-    @NotNull(message = "Поле \"Описание заслуг студента\" не может быть пустым")
     private String studentDescription;
 
     @Column(name = "student_studyend")
